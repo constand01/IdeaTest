@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/login.css"/>
 </head>
 <body><!-------------------login-------------------------->
 <div class="login">

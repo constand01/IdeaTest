@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>详情页</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/proList.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/proList.css"/>
 </head>
 <body><!------------------------------head------------------------------>
 <%@ include file="header.jsp" %>
@@ -34,7 +34,7 @@
                                                                             alt="${p.product_description }"
                                                                             data-src="image/product/${p.product_filename }"></p>
                         </div>
-                    <p>数量&nbsp;&nbsp;库存<span>${p.product_stock }</span>件</p>
+                    <p>数量&nbsp;&nbsp;库存<span id="pronum">${p.product_stock }</span>件</p>
                     <div class="num clearfix">
                     <img class="fl sub" src="img/temp/sub.jpg">
                     <span id="count" class="fl"  contentEditable="true">1</span>
@@ -50,10 +50,11 @@
 </div>
 
 <script>
-       function shopadd(id,url){
-    	   var count= document.getElementById("count").innerHTML;
-    	   location.href='cartadd?id='+id+'&count='+count+'&url='+url;
-       }
+
+     function shopadd(id,url){
+	      var count= document.getElementById("count").innerHTML;
+	       location.href='cartadd?id='+id+'&count='+count+'&url='+url;
+      }   
        function shopadd1(id,url){
     	   var count= document.getElementById("count").innerHTML;
     	   alert("添加购物车成功");
@@ -93,12 +94,12 @@
         </div>
     </div>
     </div>
-<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/nav.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/pro.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/cart.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">jQuery(".bottom").slide({
     titCell: ".hd ul",
     mainCell: ".bd .likeList",
@@ -108,5 +109,6 @@
     autoPlay: true,
     vis: 1
 });</script>
+
 </body>
 </html>

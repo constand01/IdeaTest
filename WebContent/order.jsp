@@ -7,9 +7,9 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>order</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/proList.css"/>
-    <link rel="stylesheet" type="text/css" href="css/mygxin.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/proList.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/mygxin.css"/>
 </head>
 <body><!----------------------------------------order------------------>
 <%@ include file="header.jsp"  %>
@@ -46,7 +46,7 @@
                 <ul class="clearfix">
                     <li class="fl"><img src="image/product/${rs.cart_p_filename }"  width="100" height="100"></li>
                     <li class="fl"><p>${rs.cart_p_name }</p>
-                        <p>颜色分类：烟灰色玻璃瓶</p>
+                        <p>颜色分类：</p>
                         <p>数量：${rs.cart_p_quantity }</p></li>
                     <li class="fr">￥${rs.cart_p_price *rs.cart_p_quantity}.00</li>
                 </ul>
@@ -113,9 +113,9 @@
         </div>
     </div>
     </div>
-<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/pro.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/user.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

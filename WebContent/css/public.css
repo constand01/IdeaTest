@@ -254,6 +254,11 @@ article, aside, figcaption, figure, footer, header, hgroup, nav, section, summar
     margin-right: 40px;
 }
 
+.timediv{
+	 width: 74px;
+    height: 74px;
+    position: relative;
+}
 /*定位样式*/
 .ding {
     margin-top: 0;

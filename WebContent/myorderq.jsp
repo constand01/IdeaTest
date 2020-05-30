@@ -6,8 +6,8 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>订单</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/myorder.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/myorder.css"/>
 </head>
 <body>
 <%@ include file="header.jsp"  %>
@@ -124,8 +124,8 @@
         </div>
     </div>
     </div>
-<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/user.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

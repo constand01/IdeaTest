@@ -57,10 +57,11 @@ public class cartadd extends HttpServlet {
         	if(srcsp!=null) {
         		
         		int srccount=srcsp.getCart_p_quantity();
+        		int topcount=srcsp.getCart_p_stock();
         		int newcount=srccount+Integer.parseInt(count);
         		
-        		if(newcount>=5) {
-        			newcount=5;
+        		if(newcount>=topcount) {
+        			newcount=topcount;
         		}
         		
         		cartdao.updatenum(srcsp.getCart_id(),newcount);

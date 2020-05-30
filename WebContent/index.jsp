@@ -6,8 +6,8 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>校园二手交易网站</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/index.css"/>
 </head>
 <body>
 <%@ include file="header.jsp"  %>
@@ -45,10 +45,10 @@
     </dl>
 </a>
     <p>400-800-8200</p>
-<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/nav.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">$(function () {
     $('#home_slider').flexslider({
         animation: 'slide',

@@ -31,24 +31,24 @@ public class login extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
+		response.setContentType("text/html;charset=utf-8");    //设置字符局
 		
 		String username=request.getParameter("username");
-		String password=request.getParameter("password");
+		String password=request.getParameter("password");     //获取用户输入的用户名和密码
 		
-		int count=userdao.selectbyna(username,password);
+		int count=userdao.selectbyna(username,password);     //查找
 		if(count >0) {
-			HttpSession session=request.getSession();
+			HttpSession session=request.getSession();    //获取session对象
 			
-			SecondHand_user user=userdao.selectadmin(username,password);
+			SecondHand_user user=userdao.selectadmin(username,password);       //查找用户状态标志，是否为管理员
 		
 			session.setAttribute("name", user);
-			session.setAttribute("isLogin","1");
+			session.setAttribute("isLogin","1");            //把登录标志保存到session对象中，方便过滤器检查
 			
 			if(user.getUser_status()==2) {
 				session.setAttribute("isAdminLogin","1");
 			}else {
-				session.setAttribute("isAdminLogin","0");
+				session.setAttribute("isAdminLogin","0");              //把管理员标志保存到session对象中，方便过滤器检查
 			}
 			
 		

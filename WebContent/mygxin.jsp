@@ -6,8 +6,8 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>个人信息</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/mygxin.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/mygxin.css"/>
 </head>
 <body>
 <%@ include file="header.jsp"  %>
@@ -38,7 +38,7 @@
             <div class="gxin">
                 <div class="tx"><a href="#"><img src="img/tx.png"/>
                     <p id="avatar">修改头像</p></a></div>
-                <div class="xx"><h3 class="clearfix"><strong class="fl">基础资料</strong><a href="#" class="fr" id="edit1">编辑</a>
+                <div class="xx"><h3 class="clearfix"><strong class="fl">基础资料</strong><a href="tousermodify?id=${name.user_id }" class="fr" id="edit1">编辑</a>
                 </h3>
                     <div>姓名：${name.user_name }</div>
                     <div>生日：${name.user_birthday }</div>
@@ -51,6 +51,9 @@
                                            女
                    </c:if> 
                     </div>
+                    <div>邮箱：${name.user_email }</div>
+                    <div>电话：${name.user_phone }</div>
+                    <div>地址：${name.user_address }</div>
                     <h3>高级设置</h3><!--<div><span class="fl">银行卡</span><a href="#" class="fr">管理</a></div>-->
                     <div><span class="fl">账号地区：中国</span>
                 </div>
@@ -80,8 +83,8 @@
     </dl>
 </a>
 
-<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/user.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

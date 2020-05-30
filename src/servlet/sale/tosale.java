@@ -56,7 +56,7 @@ public class tosale extends HttpServlet {
  		String fname=f.getFileName();
 		try {
 			su.save("image/product");
-			System.out.print("图片文件已上传");
+		
 		} catch (SmartUploadException e) {
 			// TODO Auto-generated catch block 
 			e.printStackTrace();
@@ -72,14 +72,20 @@ public class tosale extends HttpServlet {
 		String sale_p_desc=requ.getParameter("saledesc");
 		int sale_p_number=Integer.parseInt(requ.getParameter("salenumber"));
 		
-		System.out.print(" 商品名称"+sale_p_name+"价格"+sprice+"数量"+sale_p_number);
+	
 		
 		
 		SecondHand_sale s=new SecondHand_sale(0,sale_u_sid,fname,sale_p_number,Integer.parseInt(sprice),sale_p_desc,sale_p_name);
 			int count=saledao.insert(s);
 		
 			if(count>0) {
-				response.sendRedirect("myorderq.jsp");
+				PrintWriter out=response.getWriter();
+				out.write("<script>");
+				out.write("alert('提交商品成功');");
+				out.write("location.href='mygxin.jsp';");
+				out.write("</script>");
+				out.close();
+				return;
 			}
 			else {
 				

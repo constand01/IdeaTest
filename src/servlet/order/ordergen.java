@@ -12,15 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import bean.SecondHand_cart;
 import bean.SecondHand_item;
 import bean.SecondHand_order;
 import bean.SecondHand_product;
-import service.cartdao;
 import service.itemdao;
 import service.orderdao;
 import service.productdao;
-import util.RandomUtil;
 
 /**
  * Servlet implementation class ordergen
@@ -93,14 +90,13 @@ public class ordergen extends HttpServlet {
    		plist.add(p);
    		 pn=Integer.parseInt(its[2]);
    	       itemdao.insert(oid,pid,pn,p.getProduct_filename(),p.getProduct_name(),p.getProduct_price());
-   		 
-   		 
+   	       pn=p.getProduct_stock()-pn;
+   		  productdao.updatenum(pid,pn);
    	 }
    	 
    	 
    	 
-		if(pn>0&&flag) {
-			String oids=String.valueOf(oid);
+		if(pn>=0&&flag) { 
 		
 			ArrayList <SecondHand_item> ilist=itemdao.selectall();
 			

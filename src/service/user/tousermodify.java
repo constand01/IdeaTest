@@ -11,26 +11,13 @@ import bean.SecondHand_user;
 import service.userdao;
 
 /**
- * Servlet implementation class touserupdate
+ * Servlet implementation class tousermodify
  */
-@WebServlet("/manager/admin_touserupdate")
-public class touserupdate extends HttpServlet {
+@WebServlet("/tousermodify")
+public class tousermodify extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public touserupdate() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		
@@ -41,10 +28,9 @@ public class touserupdate extends HttpServlet {
 		
 		request.setAttribute("user", user);
 		
-		request.getRequestDispatcher("admin_usermodify.jsp").forward(request, response);
 		
+		request.getRequestDispatcher("usermodify.jsp").forward(request, response);
 	}
 
 	
-
 }

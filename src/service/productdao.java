@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-import bean.SecondHand_cate;
 import bean.SecondHand_product;
 import dao.basedao;
 
@@ -81,6 +79,8 @@ public class productdao {
 							rs.getInt("product_cid"),
 							rs.getString("product_filename")
 							);
+					int pstock=(int)rs.getInt("product_stock");
+					if(pstock>0)
 					list.add(p);
 				}
 			} catch (SQLException e) {
@@ -132,6 +132,8 @@ public class productdao {
 							rs.getInt("product_cid"),
 							rs.getString("product_filename")
 							);
+					int pstock=(int)rs.getInt("product_stock");
+					if(pstock>0)
 					list.add(p);
 				}
 			} catch (SQLException e) {
@@ -172,6 +174,8 @@ public class productdao {
 							rs.getInt("product_cid"),
 							rs.getString("product_filename")
 							);
+					int pstock=(int)rs.getInt("product_stock");
+					if(pstock>0)
 					list.add(p);
 				}
 			} catch (SQLException e) {
@@ -216,6 +220,8 @@ public class productdao {
 							rs.getInt("product_cid"),
 							rs.getString("product_filename")
 							);
+					 int pstock=(int)rs.getInt("product_stock");
+						if(pstock>0)
 					lastlylist.add(p);
 				  }
 	    		}
@@ -238,7 +244,7 @@ public class productdao {
 	    	Connection con=basedao.getconn();
 	 
 	    	PreparedStatement ps=null;
-	    	
+	    	int pstock=0;
 	  
 	    	try {
 	    		String sql="select * from product where product_id=?";
@@ -256,7 +262,7 @@ public class productdao {
 							rs.getInt("product_cid"),
 							rs.getString("product_filename")
 							);
-					
+					  pstock=(int)rs.getInt("product_stock");
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -264,8 +270,10 @@ public class productdao {
 			}finally {
 				basedao.closeall(rs, ps, con);
 			}
-	    	
+			if(pstock>0)
 	    	return p;
+			else
+			return null;
 	    }
 	    
 	 
@@ -307,6 +315,16 @@ public class productdao {
 	    	
 	    	return list;
 	    }
+
+
+	public static int updatenum(int pid,int pn) {
+		String sql="update  product set product_stock=? where product_id=?";
+    	Object[] params= {pn,
+    			pid
+    			};
+    	return basedao.exectuIUD(sql, params);
+		
+	}
 	 
 	 
 }

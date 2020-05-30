@@ -22,10 +22,11 @@ $(function () {
     });
     $(".num .add").click(function () {
         var c = parseInt($(this).siblings("span").text());
-        if (c >= 5) {
-            confirm("限购5件")
+        var pron = document.getElementById("pronum").innerText; 
+        if (c >= pron) {
+            confirm("该商品库存不足");
         } else {
-            c++;
+        	c++;
             $(this).siblings("span").text(c);
             
             if($(this).siblings("span").attr('datasrc')){

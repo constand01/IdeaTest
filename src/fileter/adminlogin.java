@@ -39,30 +39,30 @@ public class adminlogin implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req=(HttpServletRequest)request;
-		HttpServletResponse resp=(HttpServletResponse)response;
+		HttpServletResponse resp=(HttpServletResponse)response;       //重新获取request和reponse对象
 		
-		req.setCharacterEncoding("utf-8");
+		req.setCharacterEncoding("utf-8");                              //设置字符集
 		resp.setContentType("text/html;charset=utf-8");
 		
 		
 		
 		HttpSession session=req.getSession();
-		String flag=(String)session.getAttribute("isAdminLogin");
+		String flag=(String)session.getAttribute("isAdminLogin");     //获取session对象
 		
-		String request_url=req.getRequestURI();
+		String request_url=req.getRequestURI();               //截取访问的url地址
 		String ctxPath=req.getContextPath();
 		String uri=request_url.substring(ctxPath.length());
 		
 		//if(uri.contains("login.jsp")||uri.contains("adminlogin"))
 		
-		if(uri.contains("admin_")) {
+		if(uri.contains("admin_")) {                     //如果地址中包含后台的admin_标准 ，则判断用户是否为管理员
 			if(flag!=null && flag.equals("1"))
 			{chain.doFilter(req, resp);}
 			else {
 				PrintWriter out=resp.getWriter();
 				out.write("<script>");
-				out.write("alert('请先登录');");
-				out.write("location.href='login.jsp';");
+				out.write("alert('非管理员不能访问后端页面');");
+				out.write("location.href='/SecondHand/login.jsp';");
 				out.write("</script>");
 				out.close();
 				return;

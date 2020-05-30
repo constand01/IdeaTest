@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
 import bean.SecondHand_user;
 import service.userdao;
 
@@ -19,16 +21,24 @@ import service.userdao;
 @WebServlet("/manager/adminlogin")
 public class adminlogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private   Logger log = Logger.getLogger(this.getClass().getName()); 
+	
    
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");//�����ַ���;
+		
+		
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
+	
+		log.error("this is the error when "+username+"access");
+        log.warn("this is the use login"+username);
+		log.info("message at the aminlogin");
+		
 		
 		int count=userdao.selectbyna(username,password);
 		if(count >0) {

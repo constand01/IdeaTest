@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/login.css"/>
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/calendar.js"></script>
-    <script src="js/function.js"></script>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/login.css"/>
+    <script src="/SecondHand/js/jquery-1.12.4.min.js"></script>
+    <script src="/SecondHand/js/calendar.js"></script>
+    <script src="/SecondHand/js/function.js"></script>
     
     <style>
     .reg p .error{

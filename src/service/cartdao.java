@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import bean.SecondHand_cart;
-import bean.SecondHand_user;
 import dao.basedao;
 
 public class cartdao {

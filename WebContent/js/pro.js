@@ -36,7 +36,7 @@ $(function () {
         var d = $(this).position().left;
         var c = $(this).attr("alt");
         $(this).parent("p").addClass("on");
-        $(this).parents(".smallImg").append("<span>" + c + "</span>");
+        $(this).parents(".smallImg").append("<span>" +c+ "</span>");
         $(".smallImg").find("span").css("left", d)
     }, function () {
         $(this).parents(".smallImg").find("span").remove();

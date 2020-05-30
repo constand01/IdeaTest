@@ -7,8 +7,8 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>${title }</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/proList.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/proList.css"/>
 </head>
 <body><!------------------------------head------------------------------>
 <%@ include file="header.jsp"  %>
@@ -79,10 +79,10 @@
         </div>
     </div>
     </div>
-<script src="/SecondHand/WebContent/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/SecondHand/WebContent/js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="/SecondHand/WebContent/js/nav.js" type="text/javascript" charset="utf-8"></script>
-<script src="/SecondHand/WebContent/js/pro.js" type="text/javascript" charset="utf-8"></script>
-<script src="/SecondHand/WebContent/js/cart.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/nav.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/pro.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/cart.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

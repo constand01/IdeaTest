@@ -7,7 +7,7 @@
 
         <div class="crumb-wrap">
             <div class="crumb-list"><i class="icon-font">
-            </i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">用户商品审核</span></div>
+            </i><a href="admin_index.jsp">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">用户商品审核</span></div>
         </div>
         <div class="result-wrap" >
             <form  action="/SecondHand/manager/admin_douserdel" id="myform" method="post">

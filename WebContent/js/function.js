@@ -26,7 +26,7 @@ function CheckItem(obj){
 				msgBox.addClass('error');
 				flag=false;
 			}else{
-				var url="usernamecheck?name="+encodeURI($(obj).val())+"&"+new Date().getTime();
+				var url="/SecondHand/usernamecheck?name="+encodeURI($(obj).val())+"&"+new Date().getTime();
 				//"true" "false"
 				$.get(url,function(data){
 					if(data=="false"){

@@ -29,7 +29,9 @@
                         <a href="showcart"><img src="img/gwc.png"/></a>
                         </c:if>
                     
-                    <p><a href="#"><img src="img/smewm.png"/></a></p></div>
+                    <p><a href="#"><img src="img/smewm.png"/></a></p>
+                    </div>
+                
             </div>
         </div>
       
@@ -71,8 +73,23 @@
     	location.href="selectbykey?str="+str;
     	
     }
-    
-  
+    </script>
+    <script type="text/javascript">
+    document.write("<span id=time></span>");
+    document.getElementById("time").style.position="absolute";
+    document.getElementById("time").style.bottom="0";
+    document.getElementById("time").style.right="0";
+    setInterval(function(){
+    	var d=new Date();
+    	time.innerText=d.getFullYear()
+    	+"年"+(d.getMonth()+1)
+    	+"月"+d.getDate()
+    	+"日 星期"+"日一二三四五六".charAt(d.getDay())
+    	+" "+d.getHours()
+    	+":"+d.getMinutes()
+    	+":"+d.getSeconds();
+    },1000)
+    //$("#time").css("position","absolute").css("bottom","0").css("right","0").css("font-size","30");
     </script>
 </div>
 </body>

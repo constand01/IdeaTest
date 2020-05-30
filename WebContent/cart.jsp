@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -6,9 +6,9 @@
 <head lang="en">
     <meta charset="utf-8"/>
     <title>cart</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/proList.css"/>
-    <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/SecondHand/css/proList.css"/>
+    <script src="/SecondHand/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
    
 </head>
 <body>
@@ -49,7 +49,7 @@
             <div class="price">￥${rs.cart_p_price }.00</div>
             <div class="number"><p class="num clearfix">
             <img class="fl sub" src="img/temp/sub.jpg">
-            <span datasrc="${rs.cart_id }" class="fl">${rs.cart_p_quantity }</span>
+            <span datasrc="${rs.cart_id }" class="fl" id="pronum">${rs.cart_p_quantity }</span>
             <img class="fl add" src="img/temp/add.jpg"></p></div>
             <div class="price sAll">￥${rs.cart_p_price *rs.cart_p_quantity}.00</div>
             <div class="price"><a class="del" datasrc="${rs.cart_id }" href="#2">删除</a></div>
@@ -165,8 +165,8 @@
     </div>
 </div>
 <div class="pleaseC"><p>请选择宝贝</p><img class="off" src="img/temp/off.jpg"/></div>
-<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/pro.js" type="text/javascript" charset="utf-8"></script>
+<script src="/SecondHand/js/cart.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

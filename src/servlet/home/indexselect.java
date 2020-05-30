@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.SecondHand_cate;
 import service.categorydao;
@@ -22,12 +23,13 @@ public class indexselect extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session=request.getSession();
 		
 		ArrayList <SecondHand_cate> flist= categorydao.selectcat("father");
-		request.setAttribute("flist", flist);
+		session.setAttribute("flist", flist);
 		
 		ArrayList <SecondHand_cate> clist= categorydao.selectcat("child");
-		request.setAttribute("clist", clist);
+		session.setAttribute("clist", clist);
 		
 
 		request.getRequestDispatcher("index.jsp").forward(request, response);
