@@ -59,6 +59,8 @@
         slideshowSpeed: 2000,
         useCSS: false
     });
-});</script>
+});
+</script>
+</div>
 </body>
-</html>
+   </html>
